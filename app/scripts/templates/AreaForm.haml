@@ -1,0 +1,15 @@
+%form
+  - if (validationError){
+  .alert.alert-danger
+    = validationError
+  - }
+
+  .form-group
+    %label{for: "name"} Name
+    %input.form-control{name: "name", placeholder: "name", type: "text", value: name}/
+    %label{for: "description"} Description
+    %textarea.form-control{name: "description", type: "text"}
+      = description
+    %label{for: "color"} color
+    %input.form-control{name: "color", placeholder: "color", type: "color", value: color}/
+    %input.btn.btn-primary{type: "submit"}/

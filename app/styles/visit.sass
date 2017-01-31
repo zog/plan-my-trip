@@ -1,0 +1,109 @@
+.visit
+  height: 100%
+  body
+    height: 100%
+    width: 100%
+    padding: 0
+
+  .container
+    padding: 0
+    width: 100%
+    max-width: none
+    position: relative
+  .header
+    display: none
+
+  #map
+    width: 100%
+    height: 100vh
+    border: none
+
+  #main
+    position: absolute
+    bottom: 20px
+    background: white
+    border: 5px solid #ccc
+    padding: 5px 40px 5px 5px
+    transition: transform 1s
+    -webkit-transition: -webkit-transform 1s
+    min-height: 300px
+    .tab, .back
+      position: absolute
+      bottom: 110px
+      background: #ccc
+      width: 100px
+      height: 40px
+      cursor: pointer
+      left: 100%
+      color: white
+      transition: transform 1s
+      -webkit-transition: -webkit-transform 1s
+      transform: translateX(-40px) rotate(90deg)
+      -webkit-transform: translateX(-40px) rotate(90deg)
+      transform-origin: 0 100%
+      -webkit-transform-origin: 0 100%
+      text-align: center
+      padding-top: 10px
+    .back
+      bottom: 220px
+      background-color: #E6BC32
+
+    &.hidden
+      transform: translateX(-100%)
+      -webkit-transform: translateX(-100%)
+      display: block !important
+      .tab, .back
+        transform: translateX(0) rotate(90deg)
+        -webkit-transform: translateX(0) rotate(90deg)
+      .details
+        transform: translateX(100%)
+        -webkit-transform: translateX(100%)
+  .admin
+    display: none
+
+  #pois
+    padding: 0
+  li.poi
+
+    list-style-type: none
+    margin: 0
+    float: left
+    .name
+      font-weight: bold
+      height: 70px
+      padding: 25px 10px 10px 10px
+      margin: 3px
+      border: 1px solid #eee
+      text-align: center
+      position: relative
+      .category
+        position: absolute
+        top: 2px
+        left: 2px
+
+  .poi.details
+    position: fixed
+    z-index: 1001
+    padding: 1vw
+    $margin: 0
+    top: $margin
+    left: $margin
+    right: $margin
+    bottom: $margin
+    background: rgba(255,255,255,0.9)
+    border: 3px solid #eee
+    .description
+      margin-top: 10px
+    .actions
+      position: absolute
+      bottom: 20px
+      left: 20px
+      right: 20px
+      .btn
+        width: 100px
+        height: 100px
+        margin-right: 10px
+        white-space: normal
+        &:nth-child(2n)
+          margin-right: 0
+

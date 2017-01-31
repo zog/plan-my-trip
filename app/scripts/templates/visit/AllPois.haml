@@ -1,0 +1,12 @@
+.filters{data-attribute: "category"}
+  %a.filter.all.active{href: ""} all
+  :each c in available_categories
+    %a.filter{class: c, href: "", data-filter: c}= c
+
+.filters{data-attribute: "visited"}
+  %a.filter.all.active{href: ""} All
+  %a.filter{href: "", data-filter: "true"} Visited
+  %a.filter{href: "", data-filter: "false"} Not Visited
+
+%ul#pois
+

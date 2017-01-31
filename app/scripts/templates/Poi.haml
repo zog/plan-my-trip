@@ -1,0 +1,16 @@
+
+.col-md-8
+  .name= name
+  .description= description
+.col-md-4
+  .label.label-primary.pull-right= category
+.actions
+  .col-md-6
+    - if(visited){
+     %a.btn.btn-danger.mark-non-visited.poi.col-md-12 Mark as not Visited
+    - }else{
+     %a.btn.btn-success.mark-visited.poi.col-md-12 Mark as Visited
+    - }
+  .btn-group.admin.col-md-6
+    %a.btn.btn-primary.edit.poi edit
+    %a.btn.btn-danger.delete.poi delete

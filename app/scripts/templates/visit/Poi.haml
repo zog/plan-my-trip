@@ -1,0 +1,24 @@
+
+.name
+  .category.label{style: "background-color: #{color}"}= category
+  %div= name
+.poi.details
+  .category.label{style: "background-color: #{color}"}= category
+  %h3= name
+  .description= description
+  .actions
+    - if(visited){
+    %a.btn.btn-danger.mark-non-visited.poi
+      .icon ×
+      Mark as not Visited
+    - }else{
+     %a.btn.btn-success.mark-visited.poi
+        .icon ✓
+        Mark as Visited
+    - }
+    %a.btn.btn-primary.poi.show-on-map
+      .icon &nbsp;
+      Show on map
+    %a.btn.btn-default.pull-right.close
+      .icon ×
+      Close

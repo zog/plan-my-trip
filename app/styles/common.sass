@@ -1,0 +1,24 @@
+.btn .icon
+  font-size: 3em
+  line-height: 1em
+
+.filters
+  @extend .btn-group
+  margin-bottom: 1em
+  margin-right: 1em
+  .filter
+    @extend .btn
+    @extend .btn-default
+    text-transform: capitalize
+    &.active
+      @extend .btn-primary
+
+.poi
+  padding: 15px 0
+  border-bottom: 1px solid #ccc
+  .actions
+    padding-top: 15px
+    overflow: hidden
+    width: 100%
+  .name
+    font-weight: bold

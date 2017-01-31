@@ -1,0 +1,19 @@
+%form
+  .alert.alert-danger.errors
+    - if (validationError){
+    = validationError
+    - }
+
+  .form-group
+    %label{for: "name"} Name
+    %input.form-control{name: "name", placeholder: "name", type: "text", value: name}/
+    %label{for: "description"} Description
+    %textarea.form-control{name: "description"}
+      = description
+    %label{for: "category"} Category
+    %select.form-control{name: "category"}
+      %option{value: '', selected: (category == "" ? "1" : "0")} -
+      :each c in available_categories
+        %option{value: c, selected: (category == c ? "1" : "0")}= c
+    %input.btn.btn-primary{type: "submit"}/
+
